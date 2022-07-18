@@ -1,15 +1,18 @@
 import React, { useState } from 'react'
+import Alert from './Alert';
 
 export default function TextForm(props) {
 
     const handleUpClick = (event) => {
         setText(text.toUpperCase());
+        props.showAlert("Converted to uppercase!", "success");
+        <Alert />
     }
 
     const handleOnChange = (event) => {
         setText(event.target.value);
     }
-    
+
     const [text, setText] = useState();
 
     return (
